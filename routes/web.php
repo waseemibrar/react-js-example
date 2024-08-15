@@ -19,4 +19,8 @@ Route::middleware('auth')->group(function () {
 
 require __DIR__.'/auth.php';
 
-Route::view('/{any?}', 'dashboard')->where('any', '.*')->middleware(['auth', 'verified']);
+
+Route::get('/companies', function () {
+    return view('companies');
+})->middleware(['auth', 'verified'])->name('companies');
+Route::view('/{any?}', 'companies')->where('any', '.*')->middleware(['auth', 'verified']);

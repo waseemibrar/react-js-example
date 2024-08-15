@@ -6,7 +6,7 @@ function App() {
     return (
         <BrowserRouter>
             <Routes>
-                <Route path="/dashboard" element={<CompaniesIndex />} />
+                <Route path="/companies" element={<CompaniesIndex />} />
                 <Route path="/companies/create" element={<CompaniesCreate />} />
                 <Route path="/companies/edit/:id" element={<CompaniesEdit />} />
             </Routes>
